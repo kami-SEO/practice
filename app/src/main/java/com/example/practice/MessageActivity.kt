@@ -12,5 +12,9 @@ class MessageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMessageBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //화면 들어올때 데이터 텍스트뷰에 반영
+        val intentMessage = intent.getStringExtra("message")
+
+        binding.receivedMessageTxt.text = intentMessage
     }
 }
