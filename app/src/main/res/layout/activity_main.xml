@@ -14,5 +14,16 @@
         android:layout_height="wrap_content"
         android:text="다른화면"/>
 
+    <EditText
+        android:id="@+id/messageEdt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="전달메세지 입력 "/>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="다른화면으로 전달 "/>
+
 
 </LinearLayout>
