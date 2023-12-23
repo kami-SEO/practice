@@ -12,6 +12,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.sendMessageBtn.setOnClickListener {
+//            입력한내용 변수에 저장
+            val inputMessage = binding.messageEdt.text.toString()
+
+            val myIntent = Intent(this,MessageActivity::class.java)
+            myIntent.putExtra("message",inputMessage)
+
+            startActivity(myIntent)
+
+        }
+
         binding.moveToOtherBtn.setOnClickListener {
 //다른화면으로 이동
             val myIntent = Intent(this,OtherActivity::class.java)
