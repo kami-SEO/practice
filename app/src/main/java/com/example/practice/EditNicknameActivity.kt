@@ -10,5 +10,7 @@ class EditNicknameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEditNicknameBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.okBtn
     }
 }

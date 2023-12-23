@@ -6,11 +6,17 @@ import android.os.Bundle
 import com.example.practice.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    val Request_For_Nickname = 1005
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.editNicknameBtn.setOnClickListener {
+            val myIntent = Intent(this, EditNicknameActivity::class.java)
+            startActivityForResult(myIntent,Request_For_Nickname)
+        }
 
         binding.sendMessageBtn.setOnClickListener {
 //            입력한내용 변수에 저장
